@@ -606,7 +606,7 @@
                     <a href="#required-parameters" class="toc-h2 toc-link" data-title="Required Parameters">Required Parameters</a>
                   </li>
                   <li>
-                    <a href="#optional-headers-parameters" class="toc-h2 toc-link" data-title="Optional Headers/Parameters">Optional Headers/Parameters</a>
+                    <a href="#optional-headers" class="toc-h2 toc-link" data-title="Optional Headers">Optional Headers</a>
                   </li>
                   <li>
                     <a href="#type-of-request-1-2" class="toc-h2 toc-link" data-title="Type Of Request 1">Type Of Request 1</a>
@@ -629,10 +629,33 @@
                     <a href="#required-parameters-2" class="toc-h2 toc-link" data-title="Required Parameters">Required Parameters</a>
                   </li>
                   <li>
-                    <a href="#optional-headers-parameters-2" class="toc-h2 toc-link" data-title="Optional Headers/Parameters">Optional Headers/Parameters</a>
+                    <a href="#optional-headers-2" class="toc-h2 toc-link" data-title="Optional Headers">Optional Headers</a>
                   </li>
                   <li>
                     <a href="#type-of-request-1-3" class="toc-h2 toc-link" data-title="Type Of Request 1">Type Of Request 1</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-link-for-push-unit-endpoint" class="toc-h1 toc-link" data-title="Get Link for Push (unit endpoint)">Get Link for Push (unit endpoint)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-link-for-push" class="toc-h2 toc-link" data-title="Get Link for Push">Get Link for Push</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-4" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#request-body-4" class="toc-h2 toc-link" data-title="Request Body">Request Body</a>
+                  </li>
+                  <li>
+                    <a href="#required-parameters-3" class="toc-h2 toc-link" data-title="Required Parameters">Required Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#optional-headers-3" class="toc-h2 toc-link" data-title="Optional Headers">Optional Headers</a>
+                  </li>
+                  <li>
+                    <a href="#response-sample-1-10" class="toc-h2 toc-link" data-title="Response Sample 1">Response Sample 1</a>
                   </li>
               </ul>
           </li>
@@ -652,7 +675,7 @@
                     <a href="#example-with-required-parameters-2" class="toc-h2 toc-link" data-title="Example With Required Parameters">Example With Required Parameters</a>
                   </li>
                   <li>
-                    <a href="#response-sample-1-10" class="toc-h2 toc-link" data-title="Response Sample 1">Response Sample 1</a>
+                    <a href="#response-sample-1-11" class="toc-h2 toc-link" data-title="Response Sample 1">Response Sample 1</a>
                   </li>
                   <li>
                     <a href="#example-with-emails-segments_ids-others_ids-parameters" class="toc-h2 toc-link" data-title="Example With emails, segments_ids, others_ids Parameters">Example With emails, segments_ids, others_ids Parameters</a>
@@ -678,7 +701,7 @@
                     <a href="#example-with-parameters-6" class="toc-h2 toc-link" data-title="Example With Parameters">Example With Parameters</a>
                   </li>
                   <li>
-                    <a href="#response-sample-1-11" class="toc-h2 toc-link" data-title="Response Sample 1">Response Sample 1</a>
+                    <a href="#response-sample-1-12" class="toc-h2 toc-link" data-title="Response Sample 1">Response Sample 1</a>
                   </li>
               </ul>
           </li>
@@ -2930,6 +2953,8 @@ Pasan por la validación de existencia de la clave (code=&quot;otros_nombre&quot
 <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Public-Key"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"your-public-api-key"</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Loyalink-Signature"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"your-loyalink-signature"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Measurement-Channel"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"api"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Campaign-Name"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"yyyymmdd_example_api.csv"</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Content-Type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"application/json"</span>
 <span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"[{</span><span class="se">\"</span><span class="s2">base_hinteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">12:00:00</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_id_cliente</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">client_id_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_pto_contacto</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">structure_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_finteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">2020-07-06</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_cod_encuesta</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">poll_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_genero</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gen_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_edad</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">edad_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_nombre</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">nombre_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_fonocel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">fonocel_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">example_1@loyal.ink</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">base_hinteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">00:00:00</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_id_cliente</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">client_id_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_pto_contacto</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">structure_code_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_finteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">2020-07-06</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_cod_encuesta</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">poll_code_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_genero</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gen_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_edad</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">edad_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_nombre</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">nombre_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_fonocel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">fonocel_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">example_2@loyal.ink</span><span class="se">\"</span><span class="s2">}]"</span>
 
@@ -2942,6 +2967,8 @@ Pasan por la validación de existencia de la clave (code=&quot;otros_nombre&quot
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">'Public-Key'</span><span class="p">:</span> <span class="s">'your-public-api-key'</span><span class="p">,</span>
   <span class="s">'Loyalink-Signature'</span><span class="p">:</span> <span class="s">'your-loyalink-signature'</span><span class="p">,</span>
+  <span class="s">'Measurement-Channel'</span><span class="p">:</span> <span class="s">'api'</span><span class="p">,</span>
+  <span class="s">'Campaign-Name'</span><span class="p">:</span> <span class="s">'yyyymmdd_example_api.csv'</span><span class="p">,</span>
   <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
 <span class="p">}</span>
 <span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="s">"/api/v2/surveys"</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
@@ -2951,6 +2978,8 @@ Pasan por la validación de existencia de la clave (code=&quot;otros_nombre&quot
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://api-example.loyal.ink/api/v2/surveys'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Public-Key: your-public-api-key'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Loyalink-Signature: your-loyalink-signature'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Measurement-Channel: api'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Campaign-Name: yyyymmdd_example_api.csv'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'[
   {
@@ -2980,6 +3009,8 @@ Pasan por la validación de existencia de la clave (code=&quot;otros_nombre&quot
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">myHeaders</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Headers</span><span class="p">();</span>
 <span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Public-Key</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">your-public-api-key</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Loyalink-Signature</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">your-loyalink-signature</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Measurement-Channel</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">api</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Campaign-Name</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">yyyymmdd_example_api.csv</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">raw</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">12:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_1@loyal.ink</span><span class="dl">"</span><span class="p">},{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">00:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_2@loyal.ink</span><span class="dl">"</span><span class="p">}]);</span>
@@ -3061,9 +3092,25 @@ Pasan por la validación de existencia de la clave (code=&quot;otros_nombre&quot
 <td>La no existencia de este campo en cada objeto del body provocará el rechazo de la petición.</td>
 </tr>
 </tbody></table>
-<h2 id='optional-headers-parameters'>Optional Headers/Parameters</h2>
-<p>Existe un conjunto de parametros que podrían estar incluídos -o no- entre los headers o el cuerpo del request, tales como el nombre de la campaña o el canal de medición.
-Para ver en detalle estos parametros se debe comunicar con su consultor a cargo o escribir a soporte@alco.cl.</p>
+<h2 id='optional-headers'>Optional Headers</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Measurement-Channel</td>
+<td>false</td>
+<td>Para este endpoint el valor por defecto es api, pero podría cambiar a mail o whatsapp dependiendo de lo que aconseje el consultor a cargo (dudas a soporte@alco.cl).</td>
+</tr>
+<tr>
+<td>Campaign-Name</td>
+<td>false</td>
+<td>La única restricción que tiene es que el nombre comience con una fecha válida en formato yyyymmdd, y se recomienda utilizar nombres diarios del tipo &quot;yyyymmdd_example_channel_descripcion_corta.csv&quot;.</td>
+</tr>
+</tbody></table>
 <h2 id='type-of-request-1-2'>Type Of Request 1</h2>
 <p>Agregar un solo registro a la lista de envíos. En el cuerpo del request se puede incluir hasta 1500 objetos en el json usando este endpoint masivo.</p>
 
@@ -3141,18 +3188,22 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
 <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Public-Key"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"your-public-api-key"</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Loyalink-Signature"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"your-loyalink-signature"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Measurement-Channel"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"api"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Campaign-Name"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"yyyymmdd_example_api.csv"</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Content-Type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"application/json"</span>
-<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"[{</span><span class="se">\"</span><span class="s2">base_hinteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">12:00:00</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_id_cliente</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">client_id_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_pto_contacto</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">structure_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_finteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">2020-07-06</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_cod_encuesta</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">poll_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_genero</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gen_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_edad</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">edad_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_nombre</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">nombre_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_fonocel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">fonocel_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">example_1@loyal.ink</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">base_hinteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">00:00:00</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_id_cliente</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">client_id_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_pto_contacto</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">structure_code_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_finteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">2020-07-06</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_cod_encuesta</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">poll_code_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_genero</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gen_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_edad</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">edad_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_nombre</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">nombre_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_fonocel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">fonocel_2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">example_2@loyal.ink</span><span class="se">\"</span><span class="s2">}]"</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"[{</span><span class="se">\"</span><span class="s2">base_hinteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">12:00:00</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_id_cliente</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">client_id_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_pto_contacto</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">structure_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_finteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">2020-07-06</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_cod_encuesta</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">poll_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_genero</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gen_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_edad</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">edad_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_nombre</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">nombre_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_fonocel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">fonocel_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">example_1@loyal.ink</span><span class="se">\"</span><span class="s2">}]"</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">http.client</span>
 <span class="kn">import</span> <span class="nn">mimetypes</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">"api-example.loyal.ink"</span><span class="p">)</span>
-<span class="n">payload</span> <span class="o">=</span> <span class="s">"[{</span><span class="se">\"</span><span class="s">base_hinteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">12:00:00</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_id_cliente</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">client_id_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_pto_contacto</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">structure_code_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_finteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">2020-07-06</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_cod_encuesta</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">poll_code_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_genero</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">gen_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_edad</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">edad_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_nombre</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">nombre_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_fonocel</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">fonocel_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">example_1@loyal.ink</span><span class="se">\"</span><span class="s">},{</span><span class="se">\"</span><span class="s">base_hinteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">00:00:00</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_id_cliente</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">client_id_2</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_pto_contacto</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">structure_code_2</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_finteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">2020-07-06</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_cod_encuesta</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">poll_code_2</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_genero</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">gen_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_edad</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">edad_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_nombre</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">nombre_2</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_fonocel</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">fonocel_2</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">example_2@loyal.ink</span><span class="se">\"</span><span class="s">}]"</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">"[{</span><span class="se">\"</span><span class="s">base_hinteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">12:00:00</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_id_cliente</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">client_id_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_pto_contacto</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">structure_code_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_finteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">2020-07-06</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_cod_encuesta</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">poll_code_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_genero</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">gen_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_edad</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">edad_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_nombre</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">nombre_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_fonocel</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">fonocel_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">example_1@loyal.ink</span><span class="se">\"</span><span class="s">}]"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">'Public-Key'</span><span class="p">:</span> <span class="s">'your-public-api-key'</span><span class="p">,</span>
   <span class="s">'Loyalink-Signature'</span><span class="p">:</span> <span class="s">'your-loyalink-signature'</span><span class="p">,</span>
+  <span class="s">'Measurement-Channel'</span><span class="p">:</span> <span class="s">'api'</span><span class="p">,</span>
+  <span class="s">'Campaign-Name'</span><span class="p">:</span> <span class="s">'yyyymmdd_example_api.csv'</span><span class="p">,</span>
   <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
 <span class="p">}</span>
 <span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="s">"/api/v2/survey"</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
@@ -3162,6 +3213,8 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://api-example.loyal.ink/api/v2/survey'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Public-Key: your-public-api-key'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Loyalink-Signature: your-loyalink-signature'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Measurement-Channel: api'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Campaign-Name: yyyymmdd_example_api.csv'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'[
   {
@@ -3175,25 +3228,16 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
     "otros_nombre": "nombre_1",
     "otros_fonocel": "fonocel_1",
     "otros_email": "example_1@loyal.ink"
-  }, {
-    "base_hinteraccion": "00:00:00",
-    "base_id_cliente": "client_id_2",
-    "base_pto_contacto": "structure_code_2",
-    "base_finteraccion": "2020-07-06",
-    "base_cod_encuesta": "poll_code_2",
-    "seg_genero": "gen_1",
-    "seg_edad": "edad_1",
-    "otros_nombre": "nombre_2",
-    "otros_fonocel": "fonocel_2",
-    "otros_email": "example_2@loyal.ink"
   }
 ]'</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">myHeaders</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Headers</span><span class="p">();</span>
 <span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Public-Key</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">your-public-api-key</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Loyalink-Signature</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">your-loyalink-signature</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Measurement-Channel</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">api</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Campaign-Name</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">yyyymmdd_example_api.csv</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">raw</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">12:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_1@loyal.ink</span><span class="dl">"</span><span class="p">},{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">00:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_2@loyal.ink</span><span class="dl">"</span><span class="p">}]);</span>
+<span class="kd">var</span> <span class="nx">raw</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">12:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_1@loyal.ink</span><span class="dl">"</span><span class="p">}]);</span>
 
 <span class="kd">var</span> <span class="nx">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
@@ -3214,7 +3258,7 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
 <p>En el body de la petición debe ir un arreglo de objetos json, de este tipo:</p>
 
 <blockquote>
-<p>En el body de la petición podrían ir N objetos, y cada uno de ellos eventualmente generará un correo.</p>
+<p>En el body de la petición podrían ir 1 objeto que eventualmente generará un correo.</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">[</span><span class="w">
@@ -3229,18 +3273,6 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
           </span><span class="nl">"otros_nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre_1"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"otros_fonocel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fonocel_1"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"otros_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example_1@loyal.ink"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"base_hinteraccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00:00"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"base_id_cliente"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_id_2"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"base_pto_contacto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"structure_code_2"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"base_finteraccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-06"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"base_cod_encuesta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poll_code_2"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"seg_genero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gen_1"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"seg_edad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edad_1"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"otros_nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre_2"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"otros_fonocel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fonocel_2"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"otros_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example_2@loyal.ink"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h2 id='required-parameters-2'>Required Parameters</h2>
@@ -3272,9 +3304,25 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
 <td>La no existencia de este campo en cada objeto del body provocará el rechazo de la petición.</td>
 </tr>
 </tbody></table>
-<h2 id='optional-headers-parameters-2'>Optional Headers/Parameters</h2>
-<p>Existe un conjunto de parametros que podrían estar incluídos -o no- entre los headers o el cuerpo del request, tales como el nombre de la campaña o el canal de medición.
-Para ver en detalle estos parametros se debe comunicar con su consultor a cargo o escribir a soporte@alco.cl.</p>
+<h2 id='optional-headers-2'>Optional Headers</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Measurement-Channel</td>
+<td>false</td>
+<td>Para este endpoint el valor por defecto es api, pero podría cambiar a mail o whatsapp dependiendo de lo que aconseje el consultor a cargo (dudas a soporte@alco.cl).</td>
+</tr>
+<tr>
+<td>Campaign-Name</td>
+<td>false</td>
+<td>La única restricción que tiene es que el nombre comience con una fecha válida en formato yyyymmdd, y se recomienda utilizar nombres diarios del tipo &quot;yyyymmdd_example_channel_descripcion_corta.csv&quot;.</td>
+</tr>
+</tbody></table>
 <h2 id='type-of-request-1-3'>Type Of Request 1</h2>
 <p>Agregar un solo registro a la lista de envíos. En el cuerpo del request se puede incluir solo 1 objeto (un registro) en el json usando este endpoint unitario.</p>
 
@@ -3343,8 +3391,176 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
     "otros_email": "example_1@loyal.ink"
   }
 ]'</span>
-</code></pre></div><h1 id='get-alerts-in-progress'>Get Alerts In Progress</h1><h2 id='get-alerts-in-progress-2'>Get Alerts In Progress</h2>
-<p>Este endpoint permite obtener las alertas en proceso para un rango de fechas, y su request http es <code>GET https://api-travesia.loyal.ink/api/v2/alerts?from=&lt;from&gt;&amp;to=&lt;to&gt;&amp;date_type=&lt;date_type&gt;</code>.</p>
+</code></pre></div><h1 id='get-link-for-push-unit-endpoint'>Get Link for Push (unit endpoint)</h1><h2 id='get-link-for-push'>Get Link for Push</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"uri"</span>
+<span class="nb">require</span> <span class="s2">"net/http"</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api-example.loyal.ink/api/v2/survey/push"</span><span class="p">)</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">);</span>
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Public-Key"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"your-public-api-key"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Loyalink-Signature"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"your-loyalink-signature"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Measurement-Channel"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"push"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Campaign-Name"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"yyyymmdd_example_push.csv"</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Content-Type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"application/json"</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"[{</span><span class="se">\"</span><span class="s2">base_hinteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">12:00:00</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_id_cliente</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">client_id_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_pto_contacto</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">structure_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_finteraccion</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">2020-07-06</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base_cod_encuesta</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">poll_code_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_genero</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gen_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">seg_edad</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">edad_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_nombre</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">nombre_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_fonocel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">fonocel_1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">otros_email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">example_1@loyal.ink</span><span class="se">\"</span><span class="s2">}]"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">http.client</span>
+<span class="kn">import</span> <span class="nn">mimetypes</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">"api-example.loyal.ink"</span><span class="p">)</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">"[{</span><span class="se">\"</span><span class="s">base_hinteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">12:00:00</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_id_cliente</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">client_id_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_pto_contacto</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">structure_code_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_finteraccion</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">2020-07-06</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">base_cod_encuesta</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">poll_code_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_genero</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">gen_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">seg_edad</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">edad_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_nombre</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">nombre_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_fonocel</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">fonocel_1</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">otros_email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">example_1@loyal.ink</span><span class="se">\"</span><span class="s">}]"</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Public-Key'</span><span class="p">:</span> <span class="s">'your-public-api-key'</span><span class="p">,</span>
+  <span class="s">'Loyalink-Signature'</span><span class="p">:</span> <span class="s">'your-loyalink-signature'</span><span class="p">,</span>
+  <span class="s">'Measurement-Channel'</span><span class="p">:</span> <span class="s">'push'</span><span class="p">,</span>
+  <span class="s">'Campaign-Name'</span><span class="p">:</span> <span class="s">'yyyymmdd_example_push.csv'</span><span class="p">,</span>
+  <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
+<span class="p">}</span>
+<span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="s">"/api/v2/survey/push"</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://api-example.loyal.ink/api/v2/survey/push'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Public-Key: your-public-api-key'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Loyalink-Signature: your-loyalink-signature'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Measurement-Channel: push'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Campaign-Name: yyyymmdd_example_push.csv'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+<span class="nt">--data-raw</span> <span class="s1">'[
+  {
+    "base_hinteraccion": "12:00:00",
+    "base_id_cliente": "client_id_1",
+    "base_pto_contacto": "structure_code_1",
+    "base_finteraccion": "2020-07-06",
+    "base_cod_encuesta": "poll_code_1",
+    "seg_genero": "gen_1",
+    "seg_edad": "edad_1",
+    "otros_nombre": "nombre_1",
+    "otros_fonocel": "fonocel_1",
+    "otros_email": "example_1@loyal.ink"
+  }, {
+    "base_hinteraccion": "00:00:00",
+    "base_id_cliente": "client_id_2",
+    "base_pto_contacto": "structure_code_2",
+    "base_finteraccion": "2020-07-06",
+    "base_cod_encuesta": "poll_code_2",
+    "seg_genero": "gen_1",
+    "seg_edad": "edad_1",
+    "otros_nombre": "nombre_2",
+    "otros_fonocel": "fonocel_2",
+    "otros_email": "example_2@loyal.ink"
+  }
+]'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">myHeaders</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Headers</span><span class="p">();</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Public-Key</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">your-public-api-key</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Loyalink-Signature</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">your-loyalink-signature</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Measurement-Channel</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">push</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Campaign-Name</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">yyyymmdd_example_push.csv</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">raw</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">12:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_1@loyal.ink</span><span class="dl">"</span><span class="p">},{</span><span class="dl">"</span><span class="s2">base_hinteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">00:00:00</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_id_cliente</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">client_id_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_pto_contacto</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">structure_code_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_finteraccion</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">2020-07-06</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">base_cod_encuesta</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">poll_code_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_genero</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">gen_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">seg_edad</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">edad_1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_nombre</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">nombre_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_fonocel</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">fonocel_2</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">otros_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">example_2@loyal.ink</span><span class="dl">"</span><span class="p">}]);</span>
+
+<span class="kd">var</span> <span class="nx">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="nx">myHeaders</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="nx">raw</span><span class="p">,</span>
+  <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">follow</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://api-example.loyal.ink/api/v2/survey/push</span><span class="dl">"</span><span class="p">,</span> <span class="nx">requestOptions</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre></div>
+<p>Este endpoint genera un link de encuesta para registro enviado en el body de la petición, el cual puede ser utilizado en cualquier parte y tiene una expiración definida.</p>
+<h2 id='http-request-4'>HTTP Request</h2>
+<p><code>POST https://api-example.loyal.ink/api/v2/survey/push</code></p>
+<h2 id='request-body-4'>Request Body</h2>
+<p>En el body de la petición debe ir un arreglo de objetos json, de este tipo:</p>
+
+<blockquote>
+<p>En el body de la petición podrían ir 1 objeto que generará un link si es que no hay errores en la petición.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"base_hinteraccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:00:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"base_id_cliente"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_id_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"base_pto_contacto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"structure_code_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"base_finteraccion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-06"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"base_cod_encuesta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poll_code_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"seg_genero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gen_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"seg_edad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edad_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"otros_nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nombre_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"otros_fonocel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fonocel_1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"otros_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example_1@loyal.ink"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h2 id='required-parameters-3'>Required Parameters</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>base_id_cliente</td>
+<td>true</td>
+<td>La no existencia de este campo en cada objeto del body provocará el rechazo de la petición.</td>
+</tr>
+<tr>
+<td>base_pto_contacto</td>
+<td>true</td>
+<td>La no existencia de este campo en cada objeto del body provocará el rechazo de la petición.</td>
+</tr>
+<tr>
+<td>base_finteraccion</td>
+<td>true</td>
+<td>La no existencia de este campo en cada objeto del body provocará el rechazo de la petición.</td>
+</tr>
+<tr>
+<td>base_cod_encuesta</td>
+<td>true</td>
+<td>La no existencia de este campo en cada objeto del body provocará el rechazo de la petición.</td>
+</tr>
+</tbody></table>
+<h2 id='optional-headers-3'>Optional Headers</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Measurement-Channel</td>
+<td>false</td>
+<td>Para este endpoint el valor por defecto es push.</td>
+</tr>
+<tr>
+<td>Campaign-Name</td>
+<td>false</td>
+<td>La única restricción que tiene es que el nombre comience con una fecha válida en formato yyyymmdd, y se recomienda utilizar nombres diarios del tipo &quot;yyyymmdd_example_channel_descripcion_corta.csv&quot;.</td>
+</tr>
+</tbody></table>
+<h2 id='response-sample-1-10'>Response Sample 1</h2>
+<blockquote>
+<p>Respuesta obtenida:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example-polls.loyal.ink/survey/MzM4NzMwNzkyNw==/630ab6bb3066e501640341/push/Y2xhdXR2dGE="</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_id_01"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Respuesta exitosa.</p>
+<h1 id='get-alerts-in-progress'>Get Alerts In Progress</h1><h2 id='get-alerts-in-progress-2'>Get Alerts In Progress</h2>
+<p>Este endpoint permite obtener las alertas en proceso para un rango de fechas, y su request http es <code>GET https://api-example.loyal.ink/api/v2/alerts?from=&lt;from&gt;&amp;to=&lt;to&gt;&amp;date_type=&lt;date_type&gt;</code>.</p>
 <h2 id='accepted-parameters-5'>Accepted Parameters</h2>
 <table><thead>
 <tr>
@@ -3473,7 +3689,7 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
 </code></pre></div>
 <p><code>GET https://api-example.loyal.ink/api/v2/alerts?from=2021-05-10&amp;to=2021-05-10&amp;date_type=created</code> permite obtener las alertas en progreso del día 2021-05-10.</p>
-<h2 id='response-sample-1-10'>Response Sample 1</h2>
+<h2 id='response-sample-1-11'>Response Sample 1</h2>
 <blockquote>
 <p>Respuesta obtenida:</p>
 </blockquote>
@@ -3687,7 +3903,7 @@ Para ver en detalle estos parametros se debe comunicar con su consultor a cargo 
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
 </code></pre></div>
 <p><code>POST https://api-example.loyal.ink/api/v2/alerts</code> con el body de los ejemplos permite cerrar la gestión del caso &quot;61840f5b56b10280619920&quot;.</p>
-<h2 id='response-sample-1-11'>Response Sample 1</h2>
+<h2 id='response-sample-1-12'>Response Sample 1</h2>
 <blockquote>
 <p>Respuesta obtenida:</p>
 </blockquote>
